@@ -1,0 +1,22 @@
+Loopback Interface Rule:
+  INPUT:
+    in_interface: lo
+    target: ACCEPT
+  OUTPUT:
+    out_interface: lo
+    target: ACCEPT
+SSH Rule:
+  INPUT:
+    dst: 192.168.0.231
+    src: 192.168.0.0/24
+    target: ACCEPT
+    protocol_options:
+      protocol: tcp
+      dport: 22
+  OUTPUT:
+    dst: 192.168.0.0/24
+    src: 192.168.0.231
+    target: ACCEPT
+    protocol_options:
+      protocol: tcp
+      sport: 22
