@@ -16,7 +16,7 @@ cd iptables-yml
 yum -y install epel-release
 yum -y install python34 python34-devel python34-pip gcc
 pip3 install -r requirements.txt
-chmod +x iptables-yml
+chmod +x iptables-yml.py
 ```
 
 ## 使い方
