@@ -38,6 +38,12 @@ Chain OUTPUT (policy DROP 0 packets, 0 bytes)
    14  2304 ACCEPT     tcp  --  *      *       192.168.0.231        192.168.0.0/24       tcp spt:22 /* SSH Rule */
 ```
 
+## pyinstallerでonefile化
+
+```bash
+[root@localhost ~]# pyinstaller --onefile --add-binary /usr/lib64/python3.4/site-packages/libxtwrapper.cpython-34m.so:. iptables-yml.py
+```
+
 ## ライセンス
 
 [MIT](https://github.com/sky-joker/iptables-yml/blob/master/LICENSE.txt)
